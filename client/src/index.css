@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #030317;
+  background-image: radial-gradient(#1f2148 1.9000000000000001px, #030317 1.9000000000000001px);
+  background-size: 38px 38px;}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img {
+  height: 165px;
+}
+header {
+  top:0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #c3d0e0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+header .switch-store {
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+header .switch-store a{
+  text-decoration: none;
+}
+header img {
+  height: 6rem;
+}
+header input{
+  border-radius: 2px;
+  border: 1px solid #c3d0e0;
+  padding: 4px 0;
+}
+header button{
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #030317;
+  color: #fff
+}
+header button svg{
+  padding: 0px 4px 5px 4px;
+}
+
+.pageDescript{
+  margin: 10rem 0 5rem 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.pageDescript h1{
+  font-weight: 700;
+}
+
+main .contentHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+}
+main .contentHeader h3{
+  font-weight: 700;
+}
+
+main .contentHeader select{
+  margin-left: 2rem;
+}
+
+
+
