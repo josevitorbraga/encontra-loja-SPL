@@ -7,6 +7,8 @@ export default function BuscaLoja() {
   const inputRef = useRef();
   const handleSearch = () => {
     history.push(`/search/${inputRef.current.value}`);
+    inputRef.current.value = "";
+    inputRef.current.blur();
   };
 
   // TODO: Finalizar busca e page redirect
@@ -17,18 +19,18 @@ export default function BuscaLoja() {
         <label htmlFor="storeSearch">
           <strong>Digite o nome da loja desejada</strong>
         </label>
-        <form onSubmit={() => handleSearch()}>
+        <div>
           <input
             ref={inputRef}
             type="text"
             name="loja"
             placeholder="Procurando por algo?"
-            onke
+            onKeyPress={e => e.key === "Enter" && handleSearch()}
           />
-          <button type="submit">
+          <button onClick={() => handleSearch()}>
             <FaSearch size={23} />
           </button>
-        </form>
+        </div>
       </div>
     </>
   );

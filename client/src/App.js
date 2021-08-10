@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./assets/spl_logo.svg";
 import BuscaLoja from "./components/BuscaLoja";
 import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
 
 export default function App() {
   return (
@@ -10,10 +11,12 @@ export default function App() {
       <Router>
         <header>
           <div className="mx-5 d-flex align-items-center justify-content-between">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
             <div className="switch-store">
               <Link to="/">LOJAS</Link> |{" "}
-              <Link to="/quiosques">ALIMENTAAO</Link>
+              <Link to="/alimentacao">ALIMENTAÇÃO</Link>
             </div>
             <BuscaLoja />
           </div>
@@ -23,9 +26,7 @@ export default function App() {
         </div>
         <main>
           <Switch>
-            {
-              //<Route path="/search/:parameters" component={SearchPage}/>
-            }
+            <Route path="/search/:parameters" component={SearchPage} exact />
             <Route path="/" component={HomePage} exact />
           </Switch>
         </main>

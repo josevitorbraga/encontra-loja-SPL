@@ -1,11 +1,13 @@
 const express = require("express");
-const got = require("got");
 const cors = require("cors");
 
+const got = require("got");
+
 const app = express();
+app.use(cors());
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
 
 app.get("/api", async (req, res) => {
   // TODO: error handler

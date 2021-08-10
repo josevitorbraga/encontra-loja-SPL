@@ -78,6 +78,20 @@ main .contentHeader h3{
 main .contentHeader select{
   margin-left: 2rem;
 }
+main h3 {
+  color:#fff;
+}
+main a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+main a:hover {
+  color: #e2a500;
+}
 
+main svg{
+  padding-bottom: 3px;
+}
 
 
