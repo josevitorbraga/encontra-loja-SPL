@@ -15,7 +15,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getStores() {
-      const response = await axios.get("http://localhost:3333/api");
+      const response = await axios.get("/api");
       setLojas(response.data.loja);
     }
 

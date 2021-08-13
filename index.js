@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const got = require("got");
 
@@ -8,6 +9,8 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.get("/api", async (req, res) => {
   // TODO: error handler
@@ -40,6 +43,10 @@ app.get("/api/search/:parameter", async (req, res) => {
   } else {
     res.send(response.body);
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(3333, () => {
