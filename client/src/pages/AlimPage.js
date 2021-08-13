@@ -6,7 +6,6 @@ export default function HomePage() {
   const [lojas, setLojas] = useState([]);
   const [numeroLojas, setNumeroLojas] = useState([]);
 
-  // Function that focus in a specific element by id
   const selectHandler = id => {
     const elem = document.getElementById(id);
     elem.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -15,7 +14,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getStores() {
-      const response = await axios.get("http://localhost:3333/api");
+      const response = await axios.get("http://localhost:3333/api/alimentacao");
       setLojas(response.data.loja);
     }
 

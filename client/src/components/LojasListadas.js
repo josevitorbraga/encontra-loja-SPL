@@ -6,6 +6,7 @@ export default function LojasListadas(props) {
     <>
       {props.lojas.map(item => (
         <Card
+          id={item.loja_luc}
           key={item.id}
           style={{ width: "15rem", height: "20rem", margin: "0.8rem" }}
         >

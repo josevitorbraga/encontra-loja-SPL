@@ -4,6 +4,7 @@ import logo from "./assets/spl_logo.svg";
 import BuscaLoja from "./components/BuscaLoja";
 import HomePage from "./pages/HomePage";
 import SearchPage from "./pages/SearchPage";
+import AlimPage from "./pages/AlimPage";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <main>
           <Switch>
             <Route path="/search/:parameters" component={SearchPage} exact />
+            <Route path="/alimentacao" component={AlimPage} exact />
             <Route path="/" component={HomePage} exact />
           </Switch>
         </main>
