@@ -1,6 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
+
+const port = process.env.PORT;
 
 const got = require("got");
 
@@ -49,6 +52,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(3333, () => {
+app.listen(PORT || 3333, () => {
   console.log("Server sarted, port 333");
 });
