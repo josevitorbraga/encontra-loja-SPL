@@ -11,7 +11,7 @@ export default function SearchPage(props) {
   useEffect(() => {
     async function getSearchResults() {
       const response = await axios.get(
-        `http://localhost:3333/api/search/${searchParameters}`
+        `/api/search/${searchParameters}`
       );
       setResults(response.data);
     }
